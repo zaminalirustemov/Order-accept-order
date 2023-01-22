@@ -1,0 +1,32 @@
+﻿@model List<Order>
+
+@{
+    int count = 0;
+}
+<div class="container">
+    <h2>Orders:</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">№</th>
+                <th scope="col">OrderId</th>
+                <th scope="col">Fullname</th>
+                <th scope="col">Orderstatus</th>
+                <th scope="col">Total price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                count++;
+                <tr>
+                    <th scope="row">@count</th>
+                    <td>@order.Id</td>
+                    <td>@order.FullName</td>
+                    <td>@order.OrderStatus</td>
+                    <td>@order.TotalPrice</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

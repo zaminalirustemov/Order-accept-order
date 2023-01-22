@@ -1,0 +1,20 @@
+﻿@model Order
+
+
+<div style="container; margin:50px">
+    <p style="font-weight:bold">OrderID : @Model.Id</p>
+    <p style="font-weight:bold">Member name : @Model.FullName</p>
+    <p style="font-weight:bold">Email : @Model.Email</p>
+    <p style="font-weight:bold">Country : @Model.Country</p>
+    <p style="font-weight:bold">City : @Model.City</p>
+    <p style="font-weight:bold">Address : @Model.Adress</p>
+    <p style="font-weight:bold">ZipCode : @Model.ZipCode</p>
+    <p style="font-weight:bold">Phone : @Model.Phone</p>
+    <p style="font-weight:bold">Note : @Model.Note</p>
+    <p style="font-weight:bold">TotalPRice : @Model.TotalPrice</p>
+    <p style="font-weight:bold">OrderStatus : @Model.OrderStatus</p>
+    <div>
+        <a asp-action="accept" asp-controller="order" asp-route-id="@Model.Id" class="btn btn-success">Accept</a>
+        <a asp-action="reject" asp-controller="order" asp-route-id="@Model.Id" class="btn btn-danger">Reject</a>
+    </div>
+</div>
